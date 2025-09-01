@@ -39,29 +39,8 @@ const Hero = () => {
       <div className="container mx-auto px-6 z-10 relative">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center min-h-[80vh]">
           
-          {/* Image Section */}
-          <div className="flex justify-center lg:justify-start order-2 lg:order-1 animate-fade-in">
-            <div className="relative">
-              {/* Profile Image Placeholder */}
-              <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 border-4 border-primary/30 flex items-center justify-center glass glow">
-                <div className="text-center">
-                  <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-primary/30 flex items-center justify-center">
-                    <svg className="w-12 h-12 text-primary" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-                    </svg>
-                  </div>
-                  <p className="text-muted-foreground text-sm">Your Photo Here</p>
-                </div>
-              </div>
-              
-              {/* Decorative elements */}
-              <div className="absolute -top-4 -right-4 w-8 h-8 bg-accent rounded-full glow animate-pulse"></div>
-              <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-primary rounded-full glow animate-pulse" style={{animationDelay: '1s'}}></div>
-            </div>
-          </div>
-
           {/* Content Section */}
-          <div className="text-center lg:text-left order-1 lg:order-2 animate-slide-up">
+          <div className="text-center lg:text-left order-1 lg:order-1 animate-slide-up">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
               <span className="gradient-text">Alex Johnson</span>
             </h1>
@@ -96,6 +75,27 @@ const Hero = () => {
               <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
                 <Mail className="h-6 w-6" />
               </a>
+            </div>
+          </div>
+
+          {/* Image Section */}
+          <div className="flex justify-center lg:justify-end order-2 lg:order-2 animate-fade-in">
+            <div className="relative">
+              {/* Profile Image Placeholder */}
+              <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 border-4 border-primary/30 flex items-center justify-center glass glow">
+                <div className="text-center">
+                  <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-primary/30 flex items-center justify-center">
+                    <svg className="w-12 h-12 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                    </svg>
+                  </div>
+                  <p className="text-muted-foreground text-sm">Your Photo Here</p>
+                </div>
+              </div>
+              
+              {/* Decorative elements */}
+              <div className="absolute -top-4 -right-4 w-8 h-8 bg-accent rounded-full glow animate-pulse"></div>
+              <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-primary rounded-full glow animate-pulse" style={{animationDelay: '1s'}}></div>
             </div>
           </div>
         </div>
