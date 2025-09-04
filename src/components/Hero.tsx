@@ -42,7 +42,7 @@ const Hero = () => {
           {/* Content Section */}
           <div className="text-center lg:text-left order-1 lg:order-1 animate-slide-up">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
-              <span className="gradient-text">Alex Johnson</span>
+              <span className="gradient-text">Vikram Tanwer</span>
             </h1>
             
             <div className="text-xl md:text-2xl text-muted-foreground mb-6 animate-slide-up" style={{animationDelay: '0.1s'}}>
@@ -51,7 +51,7 @@ const Hero = () => {
             
             <p className="text-lg text-muted-foreground max-w-2xl lg:max-w-none mb-8 animate-slide-up" style={{animationDelay: '0.2s'}}>
               Passionate about building scalable web applications with modern technologies. 
-              Specialized in React, Node.js, and cloud architecture.
+              Specialized in React, Node.js, and Python.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8 animate-scale-in" style={{animationDelay: '0.3s'}}>
@@ -59,20 +59,22 @@ const Hero = () => {
                 <Mail className="mr-2 h-4 w-4" />
                 Get In Touch
               </Button>
-              <Button variant="outline" size="lg" className="glass">
+              <Button 
+              onClick={scrollToNext}
+              variant="outline" size="lg" className="glass">
                 <Github className="mr-2 h-4 w-4" />
                 View My Work
               </Button>
             </div>
 
             <div className="flex gap-6 justify-center lg:justify-start animate-scale-in" style={{animationDelay: '0.4s'}}>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="https://github.com/vikramtanwer18" className="text-muted-foreground hover:text-primary transition-colors">
                 <Github className="h-6 w-6" />
               </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="https://www.linkedin.com/in/vikram-tanwer18/" className="text-muted-foreground hover:text-primary transition-colors">
                 <Linkedin className="h-6 w-6" />
               </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="mailto:vikramtanwer18@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
                 <Mail className="h-6 w-6" />
               </a>
             </div>
@@ -82,14 +84,16 @@ const Hero = () => {
           <div className="flex justify-center lg:justify-end order-2 lg:order-2 animate-fade-in">
             <div className="relative">
               {/* Profile Image Placeholder */}
+
               <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 border-4 border-primary/30 flex items-center justify-center glass glow">
-                <div className="text-center">
-                  <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-primary/30 flex items-center justify-center">
+                <div className="w-full ">
+                  {/* <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-primary/30 flex items-center justify-center">
                     <svg className="w-12 h-12 text-primary" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
                     </svg>
-                  </div>
-                  <p className="text-muted-foreground text-sm">Your Photo Here</p>
+                  </div> */}
+                  <img src="/my-portfolio-img.jpeg" alt="Vikram Tanwer" className="bg-cover w-full rounded-full" />
+                  {/* <p className="text-muted-foreground text-sm">Your Photo Here</p> */}
                 </div>
               </div>
               

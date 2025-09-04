@@ -5,74 +5,44 @@ import { Calendar, MapPin, Building2 } from "lucide-react";
 const Experience = () => {
   const experiences = [
     {
-      title: "Senior Full-Stack Developer",
-      company: "TechCorp Solutions",
-      location: "San Francisco, CA",
-      period: "2022 - Present",
-      type: "Full-time",
-      description: "Lead development of enterprise-level web applications serving 100K+ users. Architected microservices infrastructure and mentored junior developers.",
+      title: "Full-Stack Intern",
+      company: "3HandShake pvt. ltd.",
+      location: "Jaipur, Rajasthan, India",
+      period: "2024 - 2025",
+      type: "Internship",
+      description: "Contributed to the development of a SaaS platform, focusing on both frontend and backend tasks. Collaborated with cross-functional teams to deliver high-quality features.",
       achievements: [
-        "Reduced application load time by 40% through optimization",
-        "Led team of 5 developers on critical projects",
-        "Implemented CI/CD pipeline reducing deployment time by 60%",
-        "Designed scalable architecture handling 1M+ requests/day"
+        "Developed 10+ features improving user engagement by 30%",
+        "Collaborated with designers to enhance UI/UX",
+        "Participated in code reviews and contributed to team knowledge sharing",
+        "Optimized application performance, reducing load times by 20%"
       ],
-      technologies: ["React", "Node.js", "AWS", "PostgreSQL", "Docker", "Kubernetes"]
+      technologies: ["React", "Node.js", "Python", "Firebase", "Tailwind CSS"]
     },
     {
       title: "Full-Stack Developer",
-      company: "StartupHub Inc",
-      location: "Austin, TX",
-      period: "2020 - 2022",
+      company: "Fonixtech Technologies",
+      location: "Jaipur, Rajasthan, India",
+      period: "2025 - Present",
       type: "Full-time",
-      description: "Developed and maintained multiple client projects, from MVP to production. Worked directly with clients to understand requirements and deliver solutions.",
+      description: "Developed and maintained multiple client projects, Worked directly with clients to understand requirements and deliver solutions.",
       achievements: [
-        "Built 15+ successful web applications from scratch",
+        "Built 5+ successful web applications from scratch",
         "Increased client satisfaction score to 95%",
         "Reduced bug reports by 50% through thorough testing",
-        "Mentored 3 junior developers"
+        "Led a team of 3 junior developers"
       ],
-      technologies: ["Vue.js", "Express.js", "MongoDB", "Firebase", "Tailwind CSS"]
+      technologies: ["React", "Express.js", "MongoDB", 'Python', "PostgreSQL", "Tailwind CSS", "Node.js"]
     },
-    {
-      title: "Frontend Developer",
-      company: "Digital Agency Pro",
-      location: "New York, NY",
-      period: "2019 - 2020",
-      type: "Contract",
-      description: "Specialized in creating responsive, accessible, and performant frontend applications for various clients across different industries.",
-      achievements: [
-        "Delivered 20+ pixel-perfect responsive websites",
-        "Achieved 95+ Google Lighthouse scores consistently",
-        "Reduced client revision cycles by 30%",
-        "Established component library used across projects"
-      ],
-      technologies: ["React", "JavaScript", "SCSS", "Webpack", "Jest"]
-    },
-    {
-      title: "Junior Web Developer",
-      company: "WebCraft Solutions",
-      location: "Remote",
-      period: "2018 - 2019",
-      type: "Full-time",
-      description: "Started my professional journey, focusing on frontend development and learning backend technologies. Contributed to various client projects.",
-      achievements: [
-        "Completed 10+ client projects successfully",
-        "Learned full-stack development fundamentals",
-        "Contributed to open-source projects",
-        "Obtained multiple technical certifications"
-      ],
-      technologies: ["HTML", "CSS", "JavaScript", "PHP", "MySQL", "WordPress"]
-    }
   ];
 
   const education = [
     {
-      degree: "Bachelor of Science in Computer Science",
-      school: "University of Technology",
-      location: "California, USA",
-      period: "2014 - 2018",
-      details: "Graduated Magna Cum Laude, specialized in Software Engineering and Web Technologies"
+      degree: "Master of Computer Applications (MCA)",
+      school: "Apex University",
+      location: "Jaipur, Rajasthan, India",
+      period: "2023 - 2025",
+      details: "Specialized in software development, algorithms, and data structures. Completed projects on web development and database management."
     }
   ];
 

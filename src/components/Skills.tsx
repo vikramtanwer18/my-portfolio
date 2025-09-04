@@ -8,20 +8,19 @@ const Skills = () => {
       skills: [
         { name: "React", level: 95 },
         { name: "TypeScript", level: 90 },
-        { name: "Next.js", level: 85 },
-        { name: "Tailwind CSS", level: 90 },
-        { name: "Vue.js", level: 75 },
-        { name: "JavaScript", level: 95 }
+        { name: "Next.js", level: 95 },
+        { name: "Tailwind CSS", level: 95 },
+        { name: "JavaScript", level: 95 },
+        { name: "Django", level: 75 },
       ]
     },
     {
       title: "Backend",
       skills: [
-        { name: "Node.js", level: 90 },
+        { name: "Node.js", level: 95 },
         { name: "Python", level: 85 },
         { name: "Express.js", level: 88 },
         { name: "FastAPI", level: 80 },
-        { name: "GraphQL", level: 75 },
         { name: "REST APIs", level: 95 }
       ]
     },
@@ -29,22 +28,18 @@ const Skills = () => {
       title: "Database",
       skills: [
         { name: "PostgreSQL", level: 85 },
-        { name: "MongoDB", level: 80 },
+        { name: "MongoDB", level: 90 },
         { name: "Redis", level: 70 },
-        { name: "Supabase", level: 85 },
-        { name: "Prisma", level: 90 },
-        { name: "MySQL", level: 75 }
+        { name: "MySQL", level: 85 }
       ]
     },
     {
       title: "DevOps & Tools",
       skills: [
         { name: "Docker", level: 80 },
-        { name: "AWS", level: 75 },
-        { name: "Vercel", level: 90 },
         { name: "Git", level: 95 },
         { name: "GitHub Actions", level: 70 },
-        { name: "Linux", level: 80 }
+        { name: "Linux", level: 60 }
       ]
     }
   ];
@@ -103,7 +98,7 @@ const Skills = () => {
         </div>
 
         {/* Certifications */}
-        <div className="text-center animate-fade-in">
+        {/* <div className="text-center animate-fade-in">
           <h3 className="text-2xl font-semibold mb-8 text-text-highlight">
             Certifications & Achievements
           </h3>
@@ -119,7 +114,7 @@ const Skills = () => {
               </Badge>
             ))}
           </div>
-        </div>
+        </div> */}
 
         {/* Tools & Technologies */}
         <div className="mt-16 animate-fade-in">
@@ -128,8 +123,8 @@ const Skills = () => {
           </h3>
           <div className="flex flex-wrap justify-center gap-3">
             {[
-              "VS Code", "Figma", "Postman", "Jira", "Slack", "Notion", 
-              "Adobe Creative Suite", "Webpack", "Vite", "ESLint", "Prettier", "Jest"
+              "VS Code", "Figma", "Postman", "Slack", "Notion", 
+              "Microsoft Suite", "Vite", "ESLint", "Prettier", "Cursor"
             ].map((tool, index) => (
               <span 
                 key={tool} 

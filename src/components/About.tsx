@@ -33,7 +33,7 @@ const About = () => {
             About <span className="gradient-text">Me</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            I'm a passionate full-stack developer with 5+ years of experience creating digital solutions 
+            I'm a passionate full-stack developer with 1+ years of experience creating digital solutions 
             that make a difference. I love turning complex problems into simple, beautiful designs.
           </p>
         </div>
@@ -49,7 +49,7 @@ const About = () => {
             <p className="text-muted-foreground mb-6">
               I believe in writing clean, maintainable code and creating user experiences that are 
               both functional and delightful. When I'm not coding, you'll find me exploring new 
-              frameworks, contributing to open source, or mentoring fellow developers.
+              frameworks.
             </p>
             
             <div className="flex flex-wrap gap-2">
@@ -67,20 +67,20 @@ const About = () => {
               <div className="space-y-4">
                 <div className="flex justify-between">
                   <span className="text-muted-foreground">Projects Completed</span>
-                  <span className="font-semibold text-primary">50+</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-muted-foreground">Years Experience</span>
                   <span className="font-semibold text-primary">5+</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-muted-foreground">Happy Clients</span>
-                  <span className="font-semibold text-primary">30+</span>
+                  <span className="text-muted-foreground">Years Experience</span>
+                  <span className="font-semibold text-primary">1+</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-muted-foreground">Coffee Consumed</span>
-                  <span className="font-semibold text-primary">∞</span>
+                  <span className="text-muted-foreground">Happy Clients</span>
+                  <span className="font-semibold text-primary">5+</span>
                 </div>
+                {/* <div className="flex justify-between">
+                  <span className="text-muted-foreground">Coffee Consumed</span>
+                  <span className="font-semibold text-primary">1+</span>
+                </div> */}
               </div>
             </div>
           </div>

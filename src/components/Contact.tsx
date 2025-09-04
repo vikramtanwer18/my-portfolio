@@ -5,23 +5,36 @@ import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, MapPin, Github, Linkedin, Twitter } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import emailjs from 'emailjs-com';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    subject: '',
+    title: '',
     message: ''
   });
   const { toast } = useToast();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for your message. I'll get back to you soon!",
-    });
-    setFormData({ name: '', email: '', subject: '', message: '' });
+    const autoReply = emailjs.send('service_vfr62kj', 'template_djq3c5c', formData, 'PiGHpedxB7sZ_1tYs');
+    const contactUs = emailjs.send('service_vfr62kj', 'template_afqo23f', formData, 'PiGHpedxB7sZ_1tYs')
+    Promise.all([autoReply, contactUs])
+      .then((response) => {
+        toast({
+          title: "Message Sent!",
+          description: "Thank you for your message. I'll get back to you soon!",
+        });
+        setFormData({ name: '', email: '', title: '', message: '' });
+      }, (err) => {
+        console.log('FAILED...', err);
+        toast({
+          title: "Message Failed!",
+          description: "Sorry, there was an error sending your message. Please try again later.",
+        });
+        setFormData({ name: '', email: '', title: '', message: '' });
+      });
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -35,19 +48,19 @@ const Contact = () => {
     {
       icon: <Mail className="h-5 w-5" />,
       title: "Email",
-      value: "alex.johnson@email.com",
-      link: "mailto:alex.johnson@email.com"
+      value: "vikramtanwer18@gmail.com",
+      link: "mailto:vikramtanwer18@gmail.com"
     },
     {
       icon: <Phone className="h-5 w-5" />,
       title: "Phone",
-      value: "+1 (555) 123-4567",
-      link: "tel:+15551234567"
+      value: "+91 9352745868",
+      link: "tel:+919352745868"
     },
     {
       icon: <MapPin className="h-5 w-5" />,
       title: "Location",
-      value: "San Francisco, CA",
+      value: "Jaipur, Rajasthan, India",
       link: "#"
     }
   ];
@@ -56,20 +69,20 @@ const Contact = () => {
     {
       icon: <Github className="h-5 w-5" />,
       name: "GitHub",
-      url: "https://github.com",
-      username: "@alexjohnson"
+      url: "https://github.com/vikramtanwer",
+      username: "@vikramtanwer"
     },
     {
       icon: <Linkedin className="h-5 w-5" />,
       name: "LinkedIn",
-      url: "https://linkedin.com",
-      username: "Alex Johnson"
+      url: "https://www.linkedin.com/in/vikram-tanwer18/",
+      username: "Vikram Tanwer"
     },
     {
       icon: <Twitter className="h-5 w-5" />,
       name: "Twitter",
-      url: "https://twitter.com",
-      username: "@alexjohnson_dev"
+      url: "https://x.com/vikramtanwer18",
+      username: "@vikramtanwer18"
     }
   ];
 
@@ -127,13 +140,13 @@ const Contact = () => {
                 </div>
                 
                 <div>
-                  <label htmlFor="subject" className="block text-sm font-medium mb-2">
+                  <label htmlFor="title" className="block text-sm font-medium mb-2">
                     Subject *
                   </label>
                   <Input
-                    id="subject"
-                    name="subject"
-                    value={formData.subject}
+                    id="title"
+                    name="title"
+                    value={formData.title}
                     onChange={handleInputChange}
                     required
                     className="glass"
@@ -245,29 +258,15 @@ const Contact = () => {
                   Response time: Usually within 24 hours
                 </div>
                 <div className="text-sm text-muted-foreground">
-                  Timezone: PST (UTC-8)
+                  Timezone: IST (UTC+5:30)
                 </div>
               </div>
             </Card>
           </div>
         </div>
 
-        {/* Call to Action */}
-        <div className="text-center mt-16 animate-fade-in">
-          <div className="glass p-8 rounded-2xl max-w-2xl mx-auto">
-            <h3 className="text-2xl font-semibold mb-4 gradient-text">
-              Ready to Start Your Project?
-            </h3>
-            <p className="text-muted-foreground mb-6">
-              I'm always excited to work on new challenges and help bring innovative ideas to life. 
-              Let's discuss how we can work together to achieve your goals.
-            </p>
-            <Button size="lg" className="glow">
-              <Mail className="mr-2 h-4 w-4" />
-              Schedule a Call
-            </Button>
-          </div>
-        </div>
+      
+      
       </div>
     </section>
   );
