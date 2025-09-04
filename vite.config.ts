@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';  // Use official React plugin
+import react from '@vitejs/plugin-react';
 import path from 'path';
 
 // https://vitejs.dev/config/
@@ -9,11 +9,12 @@ export default defineConfig({
     port: 8080,
   },
   plugins: [
-    react(),  // Use the official plugin
+    react(),
   ],
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "./src"),
+      "@": path.resolve(__dirname, "./src"),  // Ensure the alias is set correctly
     },
   },
 });
+ 

@@ -1,13 +1,15 @@
 {
   "compilerOptions": {
-    "target": "esnext",
-    "module": "esnext",
+    "baseUrl": ".", // base URL for the project
+    "paths": {
+      "@/*": ["./src/*"] // Map the `@` alias to the `src` folder
+    },
+    "jsx": "react-jsx",
     "moduleResolution": "node",
-    "jsx": "react-jsx",         // Required for React (tsx) support
-    "esModuleInterop": true,    // Ensures compatibility with commonjs modules
-    "skipLibCheck": true,
-    "allowJs": true,
-    "resolveJsonModule": true
+    "strict": true
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx"]
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx"
+  ]
 }
