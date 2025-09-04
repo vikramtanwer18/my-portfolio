@@ -14,6 +14,12 @@
     "skipLibCheck": true,
     "allowJs": true,
     "noUnusedLocals": false,
-    "strictNullChecks": false
+    "strictNullChecks": false,
+    "jsx": "react-jsx",         // Important for React (tsx) support
+    "module": "esnext",         // Required for modern JavaScript modules
+    "moduleResolution": "node", // Node module resolution for dependencies
+    "target": "esnext",         // For modern JS features
+    "esModuleInterop": true,    // Ensures compatibility with commonjs modules
+    "resolveJsonModule": true   // Allows importing JSON files as modules
   }
 }
