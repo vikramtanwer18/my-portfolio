@@ -1,11 +1,30 @@
 import { Button } from "@/components/ui/button";
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
 import heroBackground from "@/assets/hero-bg.jpg";
+import { useState } from "react";
+
 
 const Hero = () => {
+   const [isOpen, setIsOpen] = useState(false);
+   const [activeSection, setActiveSection] = useState('');
+   
   const scrollToNext = () => {
     const aboutSection = document.getElementById('about');
     aboutSection?.scrollIntoView({ behavior: 'smooth' });
+  };
+    const handleNavClick = (href: string) => {
+    setIsOpen(false);
+    if (href === '#top') {
+      scrollToTop();
+    } else {
+      const element = document.querySelector(href);
+      element?.scrollIntoView({ behavior: 'smooth' });
+    }
+  };  
+
+    const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    setActiveSection('');
   };
 
   return (
@@ -36,7 +55,7 @@ const Hero = () => {
         ))}
       </div>
 
-      <div className="container mx-auto px-6 z-10 relative">
+      <div className="max-w-7xl mx-auto px-6 z-10 relative">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center min-h-[80vh]">
           
           {/* Content Section */}
@@ -55,15 +74,19 @@ const Hero = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8 animate-scale-in" style={{animationDelay: '0.3s'}}>
-              <Button size="lg" className="glow pulse-glow">
+              <Button 
+                onClick={() => handleNavClick('#contact')}
+                size="lg" className="glow pulse-glow">
                 <Mail className="mr-2 h-4 w-4" />
                 Get In Touch
               </Button>
               <Button 
-              onClick={scrollToNext}
-              variant="outline" size="lg" className="glass">
+               
+                variant="outline" size="lg" className="glass">
                 <Github className="mr-2 h-4 w-4" />
-                View My Work
+                <a href="https://github.com/vikramtanwer18" target="_blank" rel="noopener noreferrer">
+                  View My Work
+                </a>
               </Button>
             </div>
 
@@ -87,13 +110,9 @@ const Hero = () => {
 
               <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 border-4 border-primary/30 flex items-center justify-center glass glow">
                 <div className="w-full ">
-                  {/* <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-primary/30 flex items-center justify-center">
-                    <svg className="w-12 h-12 text-primary" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-                    </svg>
-                  </div> */}
+               
                   <img src="/my-portfolio-img.jpeg" alt="Vikram Tanwer" className="bg-cover w-full rounded-full" />
-                  {/* <p className="text-muted-foreground text-sm">Your Photo Here</p> */}
+ 
                 </div>
               </div>
               

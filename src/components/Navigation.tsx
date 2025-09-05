@@ -62,14 +62,14 @@ const Navigation = () => {
           : 'bg-transparent py-6'
       }`}
     >
-      <div className="container mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <button
             onClick={scrollToTop}
             className="text-2xl font-bold gradient-text hover:scale-105 transition-transform"
           >
-            AJ
+            VT
           </button>
 
           {/* Desktop Navigation */}

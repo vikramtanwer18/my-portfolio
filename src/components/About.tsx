@@ -27,7 +27,7 @@ const About = () => {
 
   return (
     <section id="about" className="py-20 bg-secondary/20">
-      <div className="container mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             About <span className="gradient-text">Me</span>
